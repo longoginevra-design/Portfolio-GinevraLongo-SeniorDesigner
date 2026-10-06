@@ -182,16 +182,21 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+  }
+
+  .skills-label-text {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 14px;
+    margin: 0;
+    padding: 0;
     font-family: var(--sans);
+    font-size: 14px;
     color: var(--gray-700);
     white-space: nowrap;
     transition: color 0.15s ease;
   }
 
-  .skills-label-cell.is-selected { color: var(--accent); font-weight: 500; }
+  .skills-label-cell.is-selected .skills-label-text { color: var(--accent); font-weight: 500; }
 
   .skills-numbers { margin-top: 6px; }
 
@@ -216,9 +221,10 @@
     align-items: center;
     justify-content: flex-end;
     padding-right: 10px;
+    font-family: var(--sans);
     font-size: 11px;
+    text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-variant-caps: small-caps;
     color: var(--gray-500);
   }
 
@@ -288,9 +294,10 @@
   }
 
   .skills-panel-level {
+    font-family: var(--sans);
     font-size: 12px;
-    letter-spacing: 0.04em;
-    font-variant-caps: small-caps;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--gray-500);
     margin-bottom: 6px;
   }
