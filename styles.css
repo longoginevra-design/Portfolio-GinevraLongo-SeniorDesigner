@@ -159,6 +159,15 @@
   .tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
   .tag-row + p { margin-top: 10px; }
 
+  /* Profile-scoped contrast fix: the shared .work-tag (gray-500 on
+     gray-100, ~3.1:1) fails 4.5:1. Scoped to #profile so the Work
+     section's case-card tags, which use the same class, are untouched. */
+  #profile .work-tag {
+    color: var(--gray-700);
+    background: none;
+    border: 1px solid var(--gray-300);
+  }
+
   .profile-aim { margin-top: 40px; }
 
   /* ---- SKILLS SHAPE ---- */
@@ -324,6 +333,12 @@
   }
 
   .skills-panel-text { font-size: 16px; line-height: 1.65; color: var(--gray-700); }
+
+  .skills-legend {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+  }
 
   @media (max-width: 600px) {
     .skills-grid-wrap { display: none; }
