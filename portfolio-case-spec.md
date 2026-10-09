@@ -928,9 +928,8 @@ product alive*: adoption, arbitration between teams, and *documentation
 people actually open*." No emphasis elsewhere in this paragraph.
 
 `.spec` panel: unchanged. The spacing between `.case-lede` and `.case-body`
-is this page's own default (no page-scoped override exists here) — not to
-be confused with Case 01, where that gap was widened on request; the two
-pages are not in sync on this point.
+is widened by a page-scoped `.case-why { margin-top: 32px }`, matching the
+same fix applied to Case 01.
 
 ### 01 — The problem
 

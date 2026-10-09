@@ -13,6 +13,13 @@
 <link rel="stylesheet" href="case.css">
 <script src="main.js" defer></script>
 <style>
+  /* Extra breathing room between the lede and the header body on this page,
+     matching the same fix applied to case-01's .case-why. Shared
+     .case-lede/.case-body carry no margin between them by default, and
+     .case-why is also used (unmodified) on case-03, so this lives here
+     rather than in the shared stylesheet. */
+  .case-why { margin-top: 32px; }
+
   /* ---- GALLERY frame sizing: base mechanics in case.css (shared with
      case-03). This page's 6 assets share identical native dimensions, so
      no frame height-jump risk between items, nothing extra needed. ---- */
