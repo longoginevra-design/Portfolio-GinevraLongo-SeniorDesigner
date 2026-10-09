@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="case.css">
 <script src="main.js" defer></script>
 <style>
+  /* Extra breathing room between the lede and the header body on this page,
+     matching the same fix applied to case-01's and case-02's .case-why.
+     Shared .case-lede/.case-body carry no margin between them by default,
+     so this lives here rather than in the shared stylesheet. */
+  .case-why { margin-top: 32px; }
+
   /* ---- VIDEO (after header) ---- */
   .case-video { margin: 0 auto; width: fit-content; max-width: 820px; position: relative; }
   .case-video video { display: block; width: 100%; height: auto; max-height: 62vh; border: 1px solid var(--gray-300); background: var(--gray-100); }

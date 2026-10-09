@@ -1133,7 +1133,10 @@ sales conversation that kept starting in the wrong place*, and the result
 was measured in *qualified leads*, not in a design metric." No emphasis
 elsewhere in this paragraph.
 
-`.spec` panel (five rows, including "What's shown"): unchanged.
+`.spec` panel (five rows, including "What's shown"): unchanged. The spacing
+between `.case-lede` and `.case-body` is widened by a page-scoped
+`.case-why { margin-top: 32px }`, matching the same fix applied to Case 01
+and Case 02.
 
 ### 01 — The problem
 
