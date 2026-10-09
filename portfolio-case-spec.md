@@ -1061,6 +1061,16 @@ files were deleted rather than left as orphaned dead weight.
 
 ## Case 03 — Designing to sell
 
+*Oct 2026 — copy pass: body copy across the header and all five sections
+replaced per `brief-case-03-copy.md`; structure, markup, classes, CSS,
+video, the three scenario screenshots, their labels, alt text and captions
+unchanged, with one bounded exception: THE IMPACT's card 4 ("The method
+outlived the project") was removed, and with only three cards left the
+page-local `.phases` 2-column override was removed too, so the shared
+3-column default now applies, matching case-01 and case-02. Every em dash
+on the page was also removed this round, replaced with a comma, colon or
+full stop. Supersedes the copy blocks below.*
+
 *Aug 2026, header retrofit round: kicker "Designing to sell", `.case-title`
 h1 changed to "Sales Tool for a Connected Product Ecosystem", `.case-lede`
 renamed from `.lede`. `.rise` → `.reveal` throughout. `.pager` replaces the
@@ -1107,10 +1117,116 @@ HEADER          kicker "Designing to sell" · h1 (work-item title) · lede · Wh
 VIDEO           autoplaying, muted, loop, real pause/play toggle — reuses case03-hero.mp4/poster
 01 THE PROBLEM
 02 THE SOLUTION (inverted)   ← the page's one diagram: one line through the three real downtime-scenario screens
-03 THE IMPACT        ← .phases, 4 cards (page-local 2-column override)
+03 THE IMPACT        ← .phases, 3 cards (shared 3-column default; the page-local 2-column override was removed with card 4, Oct 2026)
 04 INSIDE THE PRODUCT · DESIGN DECISIONS   ← .decisions, 3 blocks, no images
 05 WHAT I'D DO DIFFERENTLY
 ```
+
+### Header
+
+`.case-lede`: "Twelve years of building a connected ecosystem, and a sales
+network still selling the machine."
+
+`.case-body` (one paragraph), two `em.key` emphasis spans: "The case where
+design was a commercial instrument. The request wasn't a screen but *a
+sales conversation that kept starting in the wrong place*, and the result
+was measured in *qualified leads*, not in a design metric." No emphasis
+elsewhere in this paragraph.
+
+`.spec` panel (five rows, including "What's shown"): unchanged.
+
+### 01 — The problem
+
+**Pre-title:** The product had changed. The selling hadn't.
+
+> Over twelve years the client had built more than ten software products
+> around its machine: operator interfaces, quality control, efficiency
+> dashboards, planning, service. The sales network still opened on power,
+> precision and reliability, which buyers now take for granted, and that
+> matters because the price gap with Asian competitors is 30 to 50% and
+> hardware alone can't close it. Cycles were getting longer, fairs produced
+> few qualified opportunities, and software was folded into the machine
+> price to close deals. The ecosystem had no price.
+
+One paragraph. `<strong>` on "30 to 50%."
+
+### 02 — The solution (`.inverted`)
+
+**Pre-title:** One touchpoint, not the whole funnel
+
+> The problem was the whole commercial process. We took one point of it,
+> the trade fair stand, because it's the most visible and the easiest to
+> measure. The result is a navigable prototype that opens with a question
+> about the buyer's business, walks them through a downtime scenario across
+> three of the ten products in one continuous flow, and ends as a CRM
+> record: role, company, the pages that mattered, the seller's notes.
+> Leaving the rest of the funnel alone is why there was a result to report
+> after one season.
+
+One paragraph. `<strong>` on "three of the ten products in one continuous
+flow," rendered white by the shared `.inverted .case-body strong` rule.
+Diagram, scenario labels, step captions and `figcaption`: unchanged except
+for scenario 03's caption, "Places the order, planned, not an emergency"
+(was an em dash, removed per this round's file-wide rule).
+
+### 03 — The impact
+
+**Pre-title:** +30% qualified leads in the first fair season
+
+> **+30% qualified leads.** At fairs in the first season using the tool,
+> against the historical average.
+>
+> **Priorities surfaced in 5 minutes at the stand.** The seller asks which
+> of three areas is most urgent; the answer qualifies the opportunity and
+> keeps the decision maker at the table.
+>
+> **Reused in 4 more contexts.** International fairs, the Innovation Centre
+> showroom, one-to-one meetings, internal training.
+
+Three cards, not four: card 4 ("The method outlived the project") is
+removed, see the Oct 2026 note above. No `<strong>` in this section.
+
+### 04 · Inside the product · design decisions
+
+**Pre-title:** Three decisions, and what each one cost
+
+> **01 · Built to make the buyer talk**
+> The seller opens with a question, where are you on downtime, on training
+> new operators, and reaches for the screen only when there's something to
+> answer. Each scenario is designed upstream, with the freedom set by how
+> much the seller should steer.
+> *More work than a free demo, and less control for the presenter. That's
+> what makes it work in a junior's hands.*
+>
+> **02 · Three products, one line**
+> The downtime scenario runs through the on-machine interface, the planning
+> software and the service module as one path: in five minutes the buyer
+> sees their own problem handled end to end. Then the seller asks which
+> area is most urgent.
+> *Three products shown means seven left out, and believable states and
+> data cost more than describing all ten. Slideware ends a conversation
+> with a technical buyer.*
+>
+> **03 · The conversation becomes a record**
+> Anything the buyer reacts to is pinned to their profile. The end of the
+> day is a structured record, ready for the CRM and for whoever writes the
+> proposal.
+> *Admin in the middle of a sales conversation. Sellers resist it until
+> they see the proposal it produces.*
+
+One plain `<em>` closing sentence per block, three in total.
+
+### 05 — What I'd do differently
+
+**Pre-title:** The scenarios were chosen at a desk
+
+> They came from competitive differentiation, the right criterion and a
+> desk-based one; the first season was the first test of whether buyers
+> wanted those conversations. I'd track which scenarios go unused and let
+> the prototype learn from each season.
+
+One paragraph. `.closing-note` (unchanged): Commercial strategy,
+segmentation and sales-cycle design developed with the wider team.
 
 ### Video
 
@@ -1187,12 +1303,13 @@ required.
 
 ### Open items (carried from the brief, not resolved here)
 
-- **Webinar audience** — left as "a sector webinar" (now IMPACT card 4, the
-  video caption, and the diagram caption), per the brief's own fallback
-  instruction, since no audience was supplied.
-- **Authorship of the webinar demo** — IMPACT card 4 states "I rebuilt the
-  approach," implemented as given; the brief flagged that this needs
-  changing if anyone else built part of it.
+- **Webinar audience** — left as "a sector webinar" (the video caption, the
+  diagram caption, and the `What's shown` row), per the brief's own
+  fallback instruction, since no audience was supplied.
+- **Authorship of the webinar demo** — the "I rebuilt the approach" claim
+  lived only in IMPACT card 4, which the Oct 2026 copy pass removed; the
+  page no longer makes this claim anywhere, so this item is moot unless the
+  claim is reinstated elsewhere.
 - **Video length/poster** — unchanged again this round; the existing file
   already clears every bar every round has set.
 - **The three scenario screens** — reconfirmed (not re-investigated,
