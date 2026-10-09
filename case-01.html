@@ -149,8 +149,8 @@
     <p class="case-lede">Two brands, one machine, eight interfaces to build — and a development plan that couldn't hit its&nbsp;deadline.</p>
 
     <div class="case-body case-why">
-      <p>This is the case I took <em class="key">from the first architectural decision to the machine leaving the floor</em>. Nobody asked for a design system — <em class="key">I proposed one</em>, because the client's problem was architectural.</p>
-      <p>Then I designed both products on top of it, screens and physical controls, and <em class="key">stayed inside the build</em> with the client's development team until it shipped.</p>
+      <p>This is the case I followed <em class="key">from the first architectural decision through implementation and quality checks</em> with the development team. The design system wasn't in the request — <em class="key">I proposed it</em>.</p>
+      <p>Then I designed both products on top of it, screens and physical controls, and <em class="key">stayed inside the build</em> until the final checks were done.</p>
     </div>
 
     <dl class="spec">
@@ -210,8 +210,7 @@
       <h3 class="sec-pretitle">Every product started from zero</h3>
     </div>
     <div class="case-body">
-      <p>The group had grown by acquisition. Two brands shipped the same type of machine, each interface rebuilt from scratch, and the plan on the table was to design and maintain every combination one by one.</p>
-      <p>That plan meant <strong>eight interfaces</strong> — two products, two screen sizes, two modes — against development deadlines that were already fixed. Nothing was reused, so nothing got cheaper.</p>
+      <p>The group had grown by acquisition, and two of its brands shipped the same kind of machine with interfaces rebuilt from scratch each time. The plan was to do it again: two products, two screen sizes, light and dark mode — <strong>eight interfaces</strong> designed and maintained one by one, against deadlines already fixed.</p>
     </div>
   </div>
 </section>
@@ -224,8 +223,8 @@
       <h3 class="sec-pretitle">The system nobody asked for</h3>
     </div>
     <div class="case-body">
-      <p>I designed the HMI for both machines. Then I proposed something that wasn't in scope: a design system, because switching brand and mode without rebuilding is an architecture problem, not a styling one.</p>
-      <p>I built it from scratch on a variables architecture — <strong>one foundation to design and maintain</strong>, every variant derived from it. Structure and interaction stay identical across the group; brand lives at the visual layer only. An operator who learns one machine can run another.</p>
+      <p>The request was for screens. The problem underneath it was switching brand and mode without rebuilding, and that is an architecture question. So I proposed a design system built on variables: <strong>one foundation</strong>, every configuration derived from it.</p>
+      <p>Navigation and interaction are the same across the group; the brand lives in the visual layer. An operator trained on one machine can run the other.</p>
     </div>
   </div>
   <div class="text">
@@ -297,18 +296,18 @@
     <ol class="phases reveal">
       <li class="phase">
         <span class="phase-number">01</span>
-        <h4>Eight configurations from one foundation</h4>
-        <p>Designed and maintained as one system instead of eight products — and scalable at any point: a new brand joining the group enters by swapping the foundation, with no product redesign.</p>
+        <h4>8 configurations from 1 foundation</h4>
+        <p>2 products × 2 screen sizes × 2 modes, designed and maintained as one system. A new brand enters by swapping the foundation.</p>
       </li>
       <li class="phase">
         <span class="phase-number">02</span>
-        <h4>Deadlines met at a fraction of the projected build cost</h4>
-        <p>On a problem that had looked ungovernable.</p>
+        <h4>Deadlines met on a 12-month build</h4>
+        <p>At a fraction of the projected build cost, on a plan that had started as eight separate products.</p>
       </li>
       <li class="phase">
         <span class="phase-number">03</span>
-        <h4>The client adopted the same tokens in their own codebase</h4>
-        <p>Putting design and development on one logic — and bought follow-on projects, some strategically significant, from a solution that was never in the original scope.</p>
+        <h4>Tokens adopted in the client's codebase</h4>
+        <p>The development team built on the same variable architecture, so a change of brand or mode is made once — in design and in code — instead of twice.</p>
       </li>
     </ol>
   </div>
@@ -326,18 +325,18 @@
       <li class="decision reveal">
         <span class="decision-num">01</span>
         <div class="case-body">
-          <h3>The interface isn't the screen</h3>
-          <p>Part of this machine is operated by hand, on physical controls. I designed that boundary — which functions stay physical, what their limits are, and how the screen feeds back what the operator's hands are doing.</p>
-          <p><em>Designing hardware and software as one product is slower than designing the screen alone.</em></p>
+          <h3>Physical controls and screen designed as one product</h3>
+          <p>Part of the machine is operated by hand. I decided which functions stay physical, what their limits are, and how the screen shows what the operator's hands are doing.</p>
+          <p><em>Slower than designing the screen alone.</em></p>
         </div>
       </li>
 
       <li class="decision reveal">
         <span class="decision-num">02</span>
         <div class="case-body">
-          <h3>Designed for gloves and bad light</h3>
-          <p>Operators set the machine up mid-production: gloves on, noise, changing light, inside safety procedures where a wrong parameter ruins the part, not just a screen state. The client asked for the 48px standard minimum — I pushed touch targets to <strong>56px</strong>, and made screens carry only what the current task needs with secondary parameters one level away.</p>
-          <p><em>It cost rows of density in a project that wanted maximum data on screen, and the client later validated the larger target with their own operators and kept it.</em></p>
+          <h3>Touch targets at 56px, and less on screen</h3>
+          <p>Operators set the machine up with gloves on, in noise and changing light, where a wrong parameter ruins a part. The client asked for the standard 48px minimum; I set targets at <strong>56px</strong> and limited each screen to what the current task needs, with secondary parameters one tab away.</p>
+          <p><em>Fewer rows of data on a project that wanted as much data as possible. The client tested the larger target with its operators and kept it.</em></p>
           <figure class="media-frame reveal">
             <img class="media" src="assets/cases/01/case01-designedforglovesandbadlight.png" width="1920" height="714" loading="lazy" decoding="async" alt="A Single Cut configuration screen with large, touch-sized profile and cut-shape buttons, showing only the cut angles and profile dimensions relevant to the current piece.">
             <figcaption>Large targets, task-relevant info only.</figcaption>
@@ -348,9 +347,9 @@
       <li class="decision reveal">
         <span class="decision-num">03</span>
         <div class="case-body">
-          <h3>Built so engineering could scale it without me</h3>
-          <p>Two resolutions could have meant handing over two sets of screens; instead I set up a grid the development team could adapt on their own. The parameter list, dense and inconsistent across both machines, was rebuilt in one session with the front-end and back-end teams, so the structure was buildable the moment we agreed on it — and I stayed through the build, refining whatever was costing the team effort.</p>
-          <p><em>More of my time went into someone else's build cost than into more screens, which is the reason the deadlines became reachable.</em></p>
+          <h3>A grid the development team could scale alone</h3>
+          <p>Two resolutions could have meant two sets of screens. I set up a grid engineering could adapt themselves, rebuilt the parameter list with the front-end and back-end teams in one session, and stayed through the build.</p>
+          <p><em>More of my time went into their build cost than into new screens. That's why the deadlines became reachable.</em></p>
 
           <figure class="grid-diagram reveal">
             <div class="grid-diagram__row">
@@ -397,7 +396,7 @@
       <h3 class="sec-pretitle">The validation happened without me</h3>
     </div>
     <div class="case-body">
-      <p>The client ran the operator sessions and I wasn't there. I'd negotiate that access at kickoff now rather than accept it as given — the card sort happened with the people building the product, not the people using it.</p>
+      <p>The client ran the operator sessions without me, and the card sort was done with the people building the product, not the people using it. I'd negotiate that access at kickoff. What I know of the operators' reaction is one result: they confirmed the 56px target.</p>
     </div>
     <p class="closing-note">Operator validation run by the client.</p>
   </div>

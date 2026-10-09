@@ -355,6 +355,11 @@ consequential and both accepted by her:
 
 ## Case 01 — Designing to ship
 
+*Oct 2026 — copy pass: body copy across the header and all five sections
+replaced per `brief-case-01-copy.md`; structure, markup, classes, CSS,
+diagrams, images, alt text and captions unchanged. Supersedes every copy
+block quoted below (Header `.case-body`, 01–05).*
+
 *Case 01 restructured — narrative revision, Aug 2026. Withdrawn: seven-section
 skeleton, sticky sequence, interactive configuration switcher, meta strip,
 "What this shows" tag row, WORKING WITH ENGINEERING as a standalone section.*
@@ -463,13 +468,13 @@ width while every other section on the page is capped at 820/1140px).
   accent, matching `.hero-intro em`/`.case-title em` elsewhere on the site
   (there is no bold-accent idiom anywhere on `index.html`; an earlier round
   of this page used bold-accent and that was wrong), each readable
-  standalone: "This is the case I took *from the first architectural
-  decision to the machine leaving the floor*. Nobody asked for a design
-  system. *I proposed one*, because the client's problem was
-  architectural." / "Then I designed both products on top of it, screens and
-  physical controls, and *stayed inside the build* with the client's
-  development team until it shipped." A fourth emphasis would turn the block
-  from scannable into highlighted — don't add one.
+  standalone: "This is the case I followed *from the first architectural
+  decision through implementation and quality checks* with the development
+  team. The design system wasn't in the request. *I proposed it*." / "Then I
+  designed both products on top of it, screens and physical controls, and
+  *stayed inside the build* until the final checks were done." A fourth
+  emphasis would turn the block from scannable into highlighted — don't add
+  one.
 - `dl.spec` — `index.html`'s real info-panel component (`.spec`/`.spec-row`/
   `.spec-row--key`), not the page's own invented `.project-info`, which is
   gone. Two optional deviations applied, both existing tokens: panel
@@ -541,13 +546,11 @@ inside DESIGN DECISIONS below, never a standalone browsable section.
 
 **Pre-title:** Every product started from zero
 
-> The group had grown by acquisition. Two brands shipped the same type of
-> machine, each interface rebuilt from scratch, and the plan on the table
-> was to design and maintain every combination one by one.
->
-> That plan meant eight interfaces (two products, two screen sizes, two
-> modes) against development deadlines that were already fixed. Nothing was
-> reused, so nothing got cheaper.
+> The group had grown by acquisition, and two of its brands shipped the same
+> kind of machine with interfaces rebuilt from scratch each time. The plan
+> was to do it again: two products, two screen sizes, light and dark mode —
+> eight interfaces designed and maintained one by one, against deadlines
+> already fixed.
 
 ### 02 — The solution
 
@@ -556,14 +559,13 @@ inside DESIGN DECISIONS below, never a standalone browsable section.
 The page's one inverted section. Contains the page's only diagram (see
 below).
 
-> I designed the HMI for both machines. Then I proposed something that
-> wasn't in scope: a design system, because switching brand and mode without
-> rebuilding is an architecture problem, not a styling one.
+> The request was for screens. The problem underneath it was switching brand
+> and mode without rebuilding, and that is an architecture question. So I
+> proposed a design system built on variables: one foundation, every
+> configuration derived from it.
 >
-> I built it from scratch on a variables architecture: one foundation to
-> design and maintain, every variant derived from it. Structure and
-> interaction stay identical across the group; brand lives at the visual
-> layer only. An operator who learns one machine can run another.
+> Navigation and interaction are the same across the group; the brand lives
+> in the visual layer. An operator trained on one machine can run the other.
 
 **Diagram** — inline SVG, technical-drawing register (hairlines, DM Sans
 uppercase labels at 9px — no monospace font on this site, no
@@ -615,18 +617,16 @@ three IMPACT bullets are one revealed unit, unlike DESIGN DECISIONS below
 where each block reveals on its own. Three lead-bolded paragraphs, mapped
 straight onto that structure:
 
-> **Eight configurations from one foundation.** Designed and maintained as
-> one system instead of eight products, and scalable at any point: a new
-> brand joining the group enters by swapping the foundation, with no product
-> redesign.
+> **8 configurations from 1 foundation.** 2 products × 2 screen sizes × 2
+> modes, designed and maintained as one system. A new brand enters by
+> swapping the foundation.
 >
-> **Deadlines met at a fraction of the projected build cost,** on a problem
-> that had looked ungovernable.
+> **Deadlines met on a 12-month build,** at a fraction of the projected
+> build cost, on a plan that had started as eight separate products.
 >
-> **The client adopted the same tokens in their own codebase,** putting
-> design and development on one logic, and bought follow-on projects, some
-> strategically significant, from a solution that was never in the original
-> scope.
+> **Tokens adopted in the client's codebase.** The development team built on
+> the same variable architecture, so a change of brand or mode is made once —
+> in design and in code — instead of twice.
 
 ### 04 · Inside the product · design decisions
 
@@ -644,31 +644,25 @@ inheriting `.case-body`'s own grey, not accent-coloured. (This supersedes
 the earlier `.tradeoff`-class treatment from prior rounds.) Never cut for
 length.
 
-> **01 · The interface isn't the screen**
-> Part of this machine is operated by hand, on physical controls. I designed
-> that boundary: which functions stay physical, what their limits are, and
-> how the screen feeds back what the operator's hands are doing. Designing
-> hardware and software as one product is slower than designing the screen
-> alone.
+> **01 · Physical controls and screen designed as one product**
+> Part of the machine is operated by hand. I decided which functions stay
+> physical, what their limits are, and how the screen shows what the
+> operator's hands are doing. Slower than designing the screen alone.
 >
-> **02 · Designed for gloves and bad light**
-> Operators set the machine up mid-production: gloves on, noise, changing
-> light, inside safety procedures where a wrong parameter ruins the part,
-> not just a screen state. The client asked for the 48px standard minimum.
-> I pushed touch targets to 56px, and made screens carry only what the
-> current task needs with secondary parameters one level away. It cost rows
-> of density in a project that wanted maximum data on screen, and the client
-> later validated the larger target with their own operators and kept it.
+> **02 · Touch targets at 56px, and less on screen**
+> Operators set the machine up with gloves on, in noise and changing light,
+> where a wrong parameter ruins a part. The client asked for the standard
+> 48px minimum; I set targets at 56px and limited each screen to what the
+> current task needs, with secondary parameters one tab away. Fewer rows of
+> data on a project that wanted as much data as possible. The client tested
+> the larger target with its operators and kept it.
 >
-> **03 · Built so engineering could scale it without me**
-> Two resolutions could have meant handing over two sets of screens; instead
-> I set up a grid the development team could adapt on their own. The
-> parameter list, dense and inconsistent across both machines, was rebuilt
-> in one session with the front-end and back-end teams, so the structure was
-> buildable the moment we agreed on it, and I stayed through the build,
-> refining whatever was costing the team effort. More of my time went into
-> someone else's build cost than into more screens, which is the reason the
-> deadlines became reachable.
+> **03 · A grid the development team could scale alone**
+> Two resolutions could have meant two sets of screens. I set up a grid
+> engineering could adapt themselves, rebuilt the parameter list with the
+> front-end and back-end teams in one session, and stayed through the build.
+> More of my time went into their build cost than into new screens. That's
+> why the deadlines became reachable.
 
 Inline crops: at most one per block, only for blocks 01 and 02. Sourced from
 whichever of the three extra screenshots actually shows the argument — opened
@@ -698,9 +692,10 @@ can't do that. Each panel carries its own `title`/`desc`; the shared
 
 **Pre-title:** The validation happened without me
 
-> The client ran the operator sessions and I wasn't there. I'd negotiate
-> that access at kickoff now rather than accept it as given. The card sort
-> happened with the people building the product, not the people using it.
+> The client ran the operator sessions without me, and the card sort was
+> done with the people building the product, not the people using it. I'd
+> negotiate that access at kickoff. What I know of the operators' reaction
+> is one result: they confirmed the 56px target.
 
 Closing note, small, italic, quiet (`index.html`'s `.footnote` text
 treatment — grey italic, no monospace) below the section: *Operator
