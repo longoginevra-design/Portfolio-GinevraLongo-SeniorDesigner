@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HMI Redesign for an Industrial Group — Ginevra Longo</title>
+<title>HMI Redesign for an Industrial Group · Ginevra Longo</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,12 @@
      the shared styles.css — removed from here, since duplicating them page
      by page was exactly the drift this consolidation was meant to end.
      Only genuinely case-01-only rules remain below. */
+
+  /* Extra breathing room between the lede and the header body on this page
+     — shared .case-lede/.case-body carry no margin between them by default,
+     and .case-why is also used (unmodified) on case-02/case-03, so this
+     lives here rather than in the shared stylesheet. */
+  .case-why { margin-top: 32px; }
 
   /* ---- HERO: light/dark split ---- */
   .hero-split { margin: 3rem 0 0; }
@@ -146,10 +152,10 @@
 
     <p class="work-kicker">Designing to ship</p>
     <h1 class="case-title">HMI Redesign for an Industrial&nbsp;Group</h1>
-    <p class="case-lede">Two brands, one machine, eight interfaces to build — and a development plan that couldn't hit its&nbsp;deadline.</p>
+    <p class="case-lede">Two brands, one machine, eight interfaces to build, and a development plan that couldn't hit its&nbsp;deadline.</p>
 
     <div class="case-body case-why">
-      <p>This is the case I followed <em class="key">from the first architectural decision through implementation and quality checks</em> with the development team. The design system wasn't in the request — <em class="key">I proposed it</em>.</p>
+      <p>This is the case I followed <em class="key">from the first architectural decision through implementation and quality checks</em> with the development team. The design system wasn't in the request. <em class="key">I proposed it</em>.</p>
       <p>Then I designed both products on top of it, screens and physical controls, and <em class="key">stayed inside the build</em> until the final checks were done.</p>
     </div>
 
@@ -157,12 +163,12 @@
       <div class="spec-row spec-row--key">
         <dt>My role</dt>
         <dd>Design Lead
-          <small>Led the design of the screens for both machines, architected the design system, and ran the project — planning, client relationship, and oversight through development. Development by the client's IT team.</small>
+          <small>Led the design of the screens for both machines, architected the design system, and ran the project: planning, client relationship, and oversight through development. Development by the client's IT team.</small>
         </dd>
       </div>
       <div class="spec-row">
         <dt>Sector</dt>
-        <dd>Manufacturing — industrial OEM group (~€390M), built through European acquisitions</dd>
+        <dd>Manufacturing, industrial OEM group (~€390M), built through European acquisitions</dd>
       </div>
       <div class="spec-row">
         <dt>Timeline</dt>
@@ -206,11 +212,11 @@
 <section id="c1-problem">
   <div class="text">
     <div class="sec-heading reveal">
-      <h2 class="sec-label">01 — The problem</h2>
+      <h2 class="sec-label">01 · The problem</h2>
       <h3 class="sec-pretitle">Every product started from zero</h3>
     </div>
     <div class="case-body">
-      <p>The group had grown by acquisition, and two of its brands shipped the same kind of machine with interfaces rebuilt from scratch each time. The plan was to do it again: two products, two screen sizes, light and dark mode — <strong>eight interfaces</strong> designed and maintained one by one, against deadlines already fixed.</p>
+      <p>The group had grown by acquisition, and two of its brands shipped the same kind of machine with interfaces rebuilt from scratch each time. The plan was to do it again: two products, two screen sizes, light and dark mode, <strong>eight interfaces</strong> designed and maintained one by one, against deadlines already fixed.</p>
     </div>
   </div>
 </section>
@@ -219,7 +225,7 @@
 <section class="inverted" id="c1-solution">
   <div class="text">
     <div class="sec-heading reveal">
-      <h2 class="sec-label">02 — The solution</h2>
+      <h2 class="sec-label">02 · The solution</h2>
       <h3 class="sec-pretitle">The system nobody asked for</h3>
     </div>
     <div class="case-body">
@@ -280,7 +286,7 @@
         <text x="690" y="154" class="dgm-count">8</text>
         <text x="712" y="154" class="dgm-sub">configurations</text>
       </svg>
-      <figcaption>One foundation to design and maintain, every configuration derived from it — and a new brand added at any point, without redesigning the products.</figcaption>
+      <figcaption>One foundation to design and maintain, every configuration derived from it, and a new brand added at any point, without redesigning the products.</figcaption>
     </figure>
   </div>
 </section>
@@ -289,7 +295,7 @@
 <section id="c1-impact">
   <div class="text">
     <div class="sec-heading reveal">
-      <h2 class="sec-label">03 — The impact</h2>
+      <h2 class="sec-label">03 · The impact</h2>
       <h3 class="sec-pretitle">One foundation, eight configurations, deadlines met</h3>
     </div>
 
@@ -307,7 +313,7 @@
       <li class="phase">
         <span class="phase-number">03</span>
         <h4>Tokens adopted in the client's codebase</h4>
-        <p>The development team built on the same variable architecture, so a change of brand or mode is made once — in design and in code — instead of twice.</p>
+        <p>The development team built on the same variable architecture, so a change of brand or mode is made once, in design and in code, instead of twice.</p>
       </li>
     </ol>
   </div>
@@ -317,7 +323,7 @@
 <section id="c1-decisions">
   <div class="text">
     <div class="sec-heading reveal">
-      <h2 class="sec-label">04 — Inside the product · design decisions</h2>
+      <h2 class="sec-label">04 · Inside the product · design decisions</h2>
       <h3 class="sec-pretitle">Three decisions, and what each one cost</h3>
     </div>
 
@@ -327,7 +333,6 @@
         <div class="case-body">
           <h3>Physical controls and screen designed as one product</h3>
           <p>Part of the machine is operated by hand. I decided which functions stay physical, what their limits are, and how the screen shows what the operator's hands are doing.</p>
-          <p><em>Slower than designing the screen alone.</em></p>
         </div>
       </li>
 
@@ -349,7 +354,6 @@
         <div class="case-body">
           <h3>A grid the development team could scale alone</h3>
           <p>Two resolutions could have meant two sets of screens. I set up a grid engineering could adapt themselves, rebuilt the parameter list with the front-end and back-end teams in one session, and stayed through the build.</p>
-          <p><em>More of my time went into their build cost than into new screens. That's why the deadlines became reachable.</em></p>
 
           <figure class="grid-diagram reveal">
             <div class="grid-diagram__row">
@@ -380,7 +384,6 @@
                 <text x="0" y="178" class="dgm-label" fill="currentColor">DISPLAY 2 · 10″ · 8 COLUMNS</text>
               </svg>
             </div>
-            <figcaption>Same grid logic, two column counts, shown on the real screens at their true relative size and shape. The development team adapted it themselves.</figcaption>
           </figure>
         </div>
       </li>
@@ -392,7 +395,7 @@
 <section id="c1-reflect">
   <div class="text">
     <div class="sec-heading reveal">
-      <h2 class="sec-label">05 — What I'd do differently</h2>
+      <h2 class="sec-label">05 · What I'd do differently</h2>
       <h3 class="sec-pretitle">The validation happened without me</h3>
     </div>
     <div class="case-body">
