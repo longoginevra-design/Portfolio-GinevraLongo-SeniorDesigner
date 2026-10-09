@@ -852,6 +852,13 @@ the brief's own fallback instruction ("if the panels aren't actually both
 
 ## Case 02 — Designing to last
 
+*Oct 2026 — copy pass: body copy across the header and all five sections
+replaced per `brief-case-02-copy.md`; structure, markup, classes, CSS,
+gallery, documentation-pair images, alt text and captions unchanged. Every
+em dash on the page was also removed this round (not only within the
+sections touched by the brief) and replaced with a comma, colon or full
+stop. Supersedes the copy blocks below.*
+
 *Aug 2026, header retrofit round: `.case-top`/`.container`/`.backlink`,
 `.work-kicker` "Designing to last", `.case-title` h1 changed from the old
 poetic line to the literal work-item title. `.rise` → `.reveal` throughout.
@@ -908,6 +915,104 @@ GALLERY         6 images, one at a time, prev/next — discovered from assets/ca
 04 INSIDE THE PRODUCT · DESIGN DECISIONS   ← .decisions, 3 blocks, no images
 05 WHAT I'D DO DIFFERENTLY
 ```
+
+### Header
+
+`.case-lede`: "A mature design system, widely used and quietly stalling,
+inherited from someone the client had trusted for years."
+
+`.case-body` (one paragraph), two `em.key` emphasis spans: "The case about
+what happens after a system ships. I didn't build it: I took it over three
+years in, adopted and stalling, and worked on *the part that keeps a
+product alive*: adoption, arbitration between teams, and *documentation
+people actually open*." No emphasis elsewhere in this paragraph.
+
+`.spec` panel: unchanged. The spacing between `.case-lede` and `.case-body`
+is this page's own default (no page-scoped override exists here) — not to
+be confused with Case 01, where that gap was widened on request; the two
+pages are not in sync on this point.
+
+### 01 — The problem
+
+**Pre-title:** The components worked. The seams didn't.
+
+> The libraries existed and worked: a foundation library, around 56 core
+> components and an icon system, in use across the group's products since
+> 2022. The friction was between products. Each team applied the system its
+> own way, change requests pulled in opposite directions, and nobody
+> arbitrated. And I was replacing, with no notice, the person the client had
+> worked with since the start.
+
+One paragraph. `<strong>` on "56 core components."
+
+### 02 — The solution
+
+**Pre-title:** I changed how we worked, not what we shipped
+
+> Handing over components became a standing conversation with the product
+> teams, and the documentation moved up a level, from components to
+> patterns, starting with dashboards: component docs explain how a control
+> works, pattern docs explain how to build the screen a team has been asked
+> for, which is what teams actually ask. That also answered a problem
+> nobody had briefed me on. Three years in, a mature system stops
+> generating requests, and from the client's side that looks like a project
+> that is finished.
+
+One paragraph. `<strong>` on "from components to patterns." Documentation
+pair, `figcaption`s and alt text: unchanged.
+
+### 03 — The impact
+
+**Pre-title:** Renewed in the year it looked finished
+
+> **Renewed for a fourth consecutive year.** After change requests had
+> fallen by 70%.
+>
+> **6 teams using the system, 3 of them new.** The weekly meeting went from
+> 1 client contact to 5.
+>
+> **3 junior designers trained on it.** Now one of the most formative paths
+> in the firm.
+
+`<strong>` on "70%" in card 01 only.
+
+### 04 · Inside the product · design decisions
+
+**Pre-title:** Three decisions, and what each one cost
+
+> **01 · Negotiation in the open rather than central decisions**
+> When two products wanted opposite things I put both teams in the room and
+> ran it as a negotiation. The hardest case was sizing and typography,
+> where every product had a reason to be the exception.
+> *Some requests took longer to close. The decisions held, because nobody
+> had them imposed.*
+>
+> **02 · Documentation moved to where people work**
+> Thorough, and barely read: it lived in Figma, and the people who needed
+> it didn't. We moved it to Confluence, where the teams already documented,
+> and the specs into Figma's handoff tools, where the developers were.
+> *A full migration on a live system, maintained from now on outside the
+> design tool.*
+>
+> **03 · Variables at the foundation**
+> Brand, mode and product variation resolve once, at the foundation,
+> instead of component by component.
+> *A migration on a library in production, for a result nobody sees:
+> duplication that doesn't happen.*
+
+One plain `<em>` closing sentence per block, three in total.
+
+### 05 — What I'd do differently
+
+**Pre-title:** I read the continuity risk late
+
+> Fewer change requests looks like success from inside; I'd treat request
+> volume as a health metric from day one. And on a project already three
+> years old I'd put its roadmap on the table in the first weeks, so the
+> value of the work was visible before I had to prove it.
+
+One paragraph. `.closing-note` (unchanged): Component library built by the
+team before and during my tenure.
 
 ### Assets
 
